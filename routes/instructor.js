@@ -36,24 +36,6 @@ app.post('/',authGuard,(req, res) => {
     
 });
 
-app.delete('/Instructor/:id', (req, res) => {
-    let sql = `DELETE FROM instructor WHERE id = ${req.params.id}`;
-
-    database.query(sql , (err, result) => {
-        if(err){
-            res.status(400).json({
-                status : 400,
-                success : false
-            });
-        }else{
-            res.status(200).json({
-                status:200,
-                success: true
-        });
-    }
-});
-
-})
 
 
 
