@@ -39,5 +39,5 @@ app.use('/api/modules', [
 ]);
 
 app.listen(port, () => {
-    console.log(`I'm listning localhost : ${port}`);
+    console.log(`listening localhost : ${port}`);
 });

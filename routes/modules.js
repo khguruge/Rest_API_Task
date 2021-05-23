@@ -1,7 +1,6 @@
 var express = require('express');
 var app = express();
 var database = require('../config/database');
-var moment = require('moment');
 var authGuard = require('../helpers/jwt-get');
 
 

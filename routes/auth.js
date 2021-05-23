@@ -26,30 +26,10 @@ app.post('/api/login/',(req,res) => {
             });
         } 
         else res.json({
-            id:"",
             message: "Wrong username or password!"
         });
     });
 });
 
-function getCredentialsFromHeaders(req){
-
-    //het authorization from header
-    let authorization = req.header("authorization");
-
-    //convert authorization to array
-    let authData = authorization.split("");
-
-    //convert to utf-8
-    let token = Buffer.from(`${authData[1]}` , 'base64').toString('utf8');
-
-    //convert token to array
-    let credentials = token.split(":");
-
-    return{
-        email:credentials[0],
-        password:credentials[1]
-    }
-}
 
 module.exports = app;
